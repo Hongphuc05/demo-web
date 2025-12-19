@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #e2e8f0;
+  min-height: 100vh;
+  letter-spacing: -0.011em;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed shadow-sm hover:shadow-md;
+  }
+
+  .card {
+    @apply bg-white rounded-xl border border-slate-200 p-6 shadow-sm;
+  }
+
+  .textarea-custom {
+    @apply w-full p-4 border border-slate-300 rounded-lg focus:border-slate-700 focus:ring-2 focus:ring-slate-200 focus:outline-none transition-all duration-200 resize-none bg-white;
+  }
+
+  .result-box {
+    @apply w-full p-4 bg-slate-50 border border-slate-200 rounded-lg min-h-[120px];
+  }
+}

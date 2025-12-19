@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  # Backend Service - FastAPI + AI Models
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+      args:
+        - BUILDKIT_CONTEXT_KEEP_GIT_DIR=1
+    container_name: nlp-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    # volumes:
+    #   # Mount models (optional - nếu không muốn copy vào image)
+    #   - ./weight:/app/weight:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Frontend Service - React + Nginx
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nlp-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+
+networks:
+  default:
+    name: nlp-network

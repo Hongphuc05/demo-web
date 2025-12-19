@@ -1,0 +1,17 @@
+# Python Dependencies for NLP Text Analyzer Backend
+
+# Web Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.5.3
+
+# AI/ML Libraries
+torch>=2.4.0
+transformers>=4.37.0
+
+# Vietnamese NLP
+underthesea>=6.7.0
+
+# Utilities
+numpy>=1.26.0
+python-multipart==0.0.6
