@@ -113,7 +113,7 @@ npm run dev
 
 API sẽ chạy tại `http://localhost:8000`
 
-Frontend sẽ chạy tại `http://localhost:5173`
+Frontend sẽ chạy tại `http://localhost:3000`
 
 ---
 
