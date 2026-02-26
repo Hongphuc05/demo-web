@@ -1,28 +1,28 @@
-# 🤖 NLP Text Analyzer
+# NLP Text Analyzer
 
-> ⚠️ **QUAN TRỌNG**: Trước khi chạy dự án, bạn cần tải AI models riêng (không có trên Git). Xem chi tiết tại **[MODELS.md](MODELS.md)**
+> **QUAN TRỌNG**: Trước khi chạy dự án, bạn cần tải AI models riêng (không có trên Git). Xem chi tiết tại **[MODELS.md](MODELS.md)**
 
-## 📖 Giới thiệu
+## Giới thiệu
 
 **NLP Text Analyzer** là một ứng dụng web fullstack để phân tích văn bản sử dụng AI/NLP với PyTorch. Giao diện hiện đại, tối giản, cho phép người dùng:
 
-- 🎭 Phân tích **Sentiment** (Cảm xúc): Tiêu cực / Trung tính / Tích cực
-- 🏷️ Phân loại **Topic** (Chủ đề): Giảng viên, Chương trình đào tạo, Cơ sở vật chất, Khác
-- 📜 Lưu trữ lịch sử 10 phân tích gần nhất
-- 🚀 Sử dụng mô hình AI thật được train sẵn
+- Phân tích **Sentiment** (Cảm xúc): Tiêu cực / Trung tính / Tích cực
+- Phân loại **Topic** (Chủ đề): Giảng viên, Chương trình đào tạo, Cơ sở vật chất, Khác
+- Lưu trữ lịch sử 10 phân tích gần nhất
+- Sử dụng mô hình AI thật được train sẵn
 
 Dự án bao gồm **frontend React + backend FastAPI** với PyTorch models.
 
-## 📚 Hướng dẫn
+## Hướng dẫn
 
-- 🚀 **[QUICKSTART.md](QUICKSTART.md)** - Chạy nhanh với Python + npm
-- 🐳 **[DEPLOYMENT-GUIDE.md](DEPLOYMENT-GUIDE.md)** - Đóng Docker và triển khai ở máy khác (CHI TIẾT)
-- 📖 **[DOCKER.md](DOCKER.md)** - Tài liệu Docker đầy đủ
-- 📦 **[MODELS.md](MODELS.md)** - ⚠️ **BẮT BUỘC**: Hướng dẫn tải AI models (không có trên Git)
+- **[QUICKSTART.md](QUICKSTART.md)** - Chạy nhanh với Python + npm
+- **[DEPLOYMENT-GUIDE.md](DEPLOYMENT-GUIDE.md)** - Đóng Docker và triển khai ở máy khác (CHI TIẾT)
+- **[DOCKER.md](DOCKER.md)** - Tài liệu Docker đầy đủ
+- **[MODELS.md](MODELS.md)** - **BẮT BUỘC**: Hướng dẫn tải AI models (không có trên Git)
 
 ---
 
-## ✨ Chức năng
+## Chức năng
 
 ### 1. Phân tích văn bản
 - Nhập văn bản (tiếng Anh hoặc tiếng Việt)
@@ -44,7 +44,7 @@ Dự án bao gồm **frontend React + backend FastAPI** với PyTorch models.
 
 ---
 
-## 🛠️ Công nghệ sử dụng
+## Công nghệ sử dụng
 
 ### Frontend
 | Công nghệ | Phiên bản | Mục đích |
@@ -64,7 +64,7 @@ Dự án bao gồm **frontend React + backend FastAPI** với PyTorch models.
 
 ---
 
-## 🚀 Cài đặt và Chạy
+## Cài đặt và Chạy
 
 ### Yêu cầu hệ thống
 - **Node.js**: >= 18.0.0
@@ -73,7 +73,7 @@ Dự án bao gồm **frontend React + backend FastAPI** với PyTorch models.
 
 ---
 
-## 📦 Setup Backend (AI Models)
+## Setup Backend (AI Models)
 
 ### Bước 1: Tạo Python virtual environment
 
@@ -100,7 +100,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-⏳ **Lưu ý:** Quá trình cài đặt có thể mất 5-10 phút vì PyTorch và Transformers khá nặng.
+**Lưu ý:** Quá trình cài đặt có thể mất 5-10 phút vì PyTorch và Transformers khá nặng.
 
 ### Bước 4: Chạy backend server
 
@@ -116,7 +116,7 @@ Kiểm tra backend hoạt động:
 
 ---
 
-## 💻 Setup Frontend
+## Setup Frontend
 
 ### Bước 1: Cài đặt dependencies
 
@@ -134,7 +134,7 @@ Frontend sẽ chạy tại: **http://localhost:5173** (hoặc 3000/3001)
 
 ---
 
-## 🎯 Chạy Fullstack App
+## Chạy Fullstack App
 
 Bạn cần **2 terminals**:
 
@@ -154,7 +154,7 @@ Sau đó mở browser: **http://localhost:5173**
 
 ---
 
-## 📊 Test API với cURL (Optional)
+## Test API với cURL (Optional)
 
 ```bash
 curl -X POST http://localhost:8000/analyze \
@@ -164,7 +164,7 @@ curl -X POST http://localhost:8000/analyze \
 
 ---
 
-## 📁 Cấu trúc dự án
+## Cấu trúc dự án
 
 ```
 demo-web/
@@ -196,7 +196,7 @@ demo-web/
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ### Test Backend
 
@@ -212,7 +212,7 @@ Mở browser: http://localhost:8000/docs để test interactive API
 
 ---
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Backend không khởi động được
 
@@ -235,7 +235,7 @@ Mở browser: http://localhost:8000/docs để test interactive API
 
 ---
 
-## 🚀 Deployment (Production)
+## Deployment (Production)
 
 ### Backend
 
@@ -252,11 +252,11 @@ Deploy lên:
 - **Netlify**: Kết nối GitHub repo
 - **GitHub Pages**: Static hosting
 
-⚠️ **Lưu ý**: Nhớ update `API_BASE_URL` trong `src/services/api.js` khi deploy
+**Lưu ý**: Nhớ update `API_BASE_URL` trong `src/services/api.js` khi deploy
 
 ---
 
-## 🎨 Customization
+## Customization
 
 ### Thay đổi màu sắc chủ đạo
 
@@ -288,7 +288,7 @@ server: {
 
 ---
 
-## 📝 Mock API Logic
+## Mock API Logic
 
 Mock API hiện tại có logic đơn giản để demo:
 
@@ -300,7 +300,7 @@ Xem chi tiết trong [src/services/api.js](src/services/api.js)
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting Common Errors
 
 ### Lỗi: "Module not found"
 ```bash
@@ -325,21 +325,21 @@ npx tailwindcss init -p
 
 ---
 
-## 🎯 Roadmap
+## Roadmap
 
-- [x] ✅ Giao diện phân tích cơ bản
-- [x] ✅ Lịch sử phân tích
-- [x] ✅ Mock API
-- [x] ✅ Responsive design
-- [ ] 🔄 Tích hợp backend FastAPI
-- [ ] 🔄 Export lịch sử ra CSV/JSON
-- [ ] 🔄 Dark mode
-- [ ] 🔄 Multi-language support
-- [ ] 🔄 Advanced analytics dashboard
+- [x] Giao diện phân tích cơ bản
+- [x] Lịch sử phân tích
+- [x] Mock API
+- [x] Responsive design
+- [ ] Tích hợp backend FastAPI
+- [ ] Export lịch sử ra CSV/JSON
+- [ ] Dark mode
+- [ ] Multi-language support
+- [ ] Advanced analytics dashboard
 
 ---
 
-## 📞 Liên hệ & Hỗ trợ
+## Liên hệ & Hỗ trợ
 
 Nếu gặp vấn đề hoặc có câu hỏi:
 1. Check file README này trước
@@ -348,21 +348,20 @@ Nếu gặp vấn đề hoặc có câu hỏi:
 
 ---
 
-## 📄 License
+## License
 
 MIT License - Free to use for educational and commercial purposes.
 
 ---
 
-## 🙏 Credits
+## Credits
 
 - **React**: Facebook/Meta
 - **Vite**: Evan You
 - **Tailwind CSS**: Adam Wathan
-- **Icons**: Unicode Emoji
 
 ---
 
-**Happy Coding! 🚀**
+**Happy Coding!**
 
-Made with ❤️ for NLP/AI Systems
+Made for NLP/AI Systems
